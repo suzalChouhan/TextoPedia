@@ -33,7 +33,7 @@
             display: flex;
             flex-direction: row;
             /* gap: 140px; */
-            background-color: rgb(25, 129, 208);
+            background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
             width: 100vw;
             height: 40px;
             align-items: center;
@@ -47,7 +47,7 @@
     .para{
             text-align: center;
             transform: translateY(-12px);
-            color: rgb(25, 129, 208);
+            color: rgb(135, 8, 239);
             font-weight: bold;
             
     }  
@@ -57,7 +57,7 @@
             font-size: 1.1rem;}
 
     .buttonEdit{
-        background-color: rgb(25, 129, 208);
+        background:linear-gradient(to left, rgba(146, 0, 146, 0.668),rgba(53, 3, 203, 0.695));
         color: white;margin-top: 9px;
     }
     .buttonEdit:hover{
@@ -213,10 +213,14 @@
             else{TextArea.style.border = 'white';
                  wordCountNum.style.color = 'white';
                  TextArea.style.boxShadow = '0px 15px 15px black'}
+
             }
       
         function clearFunc(){
             TextArea.value = "";
+            let length = (TextArea.value).length;
+            length === 0;
+            wordCountNum.innerHTML = `${length}/500`;
         }
         
         window.addEventListener('keydown',newFunc)
