@@ -15,7 +15,7 @@
 
     .main{
         font-family: "Poppins";
-        background: linear-gradient(to top left, rgb(255, 255, 255), rgb(255, 255, 255));
+        /* background-color: #ffffff; */
         height: 100vh;
     }
     .txtArea{
@@ -69,6 +69,13 @@
         font-weight: bold;
     }
 
+    .dmodeBtn{
+                transform: translate(1240px,-130px);
+    }
+    .lmodeBtn{
+                 transform: translate(1240px,-130px);
+    }
+
 </style>
 <body class="main">
     <nav class="navbar navbar-expand">
@@ -93,6 +100,8 @@
     <div class="container">
         <h1 class="hding text-darkt m-3"> WordCounter</h1></n>
         <p class="para"> Tells you the number the words that you type in the Box Below.</p>
+        <span> <button class="btn btn-dark rounded-pill dmodeBtn" onclick="darkMOde()">Dark</button></span>
+        <span> <button class="btn btn-light text-dark rounded-pill lmodeBtn" onclick="lightMode()" >Light</button></span>
         
         <textarea class="txtArea container mt-3" id="txtArea" placeholder="Enter Your Text Here"></textarea>
        
@@ -136,8 +145,8 @@
         </div>
         <div class="col-1"> <button class="btn buttonEdit" style="width: 90px;" id="clrbtn" onclick="clearFunc()"> Clear</button></div>
         <div class="wc d-flex justify-content-end text-dark col-6 mt-2">
-            <span>Letters Count : </span>
-            <span class="wordCount text-dark" id="wcid"> 0/500 </span>
+            <span class="lcount">Letters Count : </span>
+            <span class="wordCount lcount" id="wcid"> 0/500 </span>
             
             </div>
     </div>
@@ -145,6 +154,10 @@
 
        
     </div>
+
+    <!-- <div class="container">
+        <h2 class="text-dark "> Is there any difference betweeen Word and Letter?</h2>
+    </div> -->
 </body>
 <script>
         const TextArea = document.querySelector('#txtArea');
@@ -225,6 +238,27 @@
         
         window.addEventListener('keydown',newFunc)
 
+        function darkMOde(){
+            let h1head = document.querySelector('.hding');
+            h1head.style.color = 'white';
+            let wcType = document.querySelector('.wordCount');
+            wcType.style.color = 'white';
+            let lcc = document.querySelector('.lcount');
+            lcc.style.color = 'white';
+            let hexColor = "#212121";
+            document.body.style.backgroundColor = hexColor
+        }
+
+        function lightMode(){
+            let h1head = document.querySelector('.hding');
+            h1head.style.color = 'black';
+            let wcType = document.querySelector('.wordCount');
+            wcType.style.color = 'black';
+            let lcc = document.querySelector('.lcount');
+            lcc.style.color = 'black';
+            let hexColor = "#fff"
+            document.body.style.backgroundColor = hexColor;
+        }
 
 </script>
 </html>
