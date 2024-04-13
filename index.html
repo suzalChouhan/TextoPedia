@@ -68,12 +68,20 @@
     .wc{
         font-weight: bold;
     }
-
-    .dmodeBtn{
-                transform: translate(1240px,-130px);
+    #signBtn{
+        background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+        color: white;
     }
-    .lmodeBtn{
-                 transform: translate(1240px,-130px);
+
+    .modal-header{
+            background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+    }
+    label{font-size: 1.3rem;}
+    
+    #ftrsbt{
+                background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+                text-align: center;
+                color: white;
     }
 
 </style>
@@ -98,10 +106,39 @@
         </nav>
 
     <div class="container">
+        <div class="row modebox">
+
+            <span class="col-1"> <button class="btn btn-dark rounded-pill dmodeBtn" onclick="darkMOde()">Dark</button></span>
+            <span class="col-1"> <button class="btn btn-light text-dark rounded-pill lmodeBtn" onclick="lightMode()" >Light</button></span>
+            <span class="col-9"></span>
+            <span class="col-1"> <button type="button" class="btn rounded-pill" id="signBtn" data-bs-toggle="modal" data-bs-target="#signInData"> Sign In </button></span>
+            <div class="modal fade" id="signInData">
+                <div class="modal-dialog">
+                    <div class="modal-content modalEditContent">
+                        <div class="modal-header">
+                            <div class="modal-title text-light"> Sign In </div>
+                            <button type="button" class="btn-close bg-light" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                              <div class="container d-flex justify-content-center signformClass">  
+                                <form> 
+                                    <label for="userForm" class="labCol">Username or Email</label><br>
+                                    <input type="text" id="userForm" placeholder="Email"> <br>
+                                    <label for="passForm"  class="labCol3">Password</label><br>
+                                    <input type="password" placeholder="Password">
+                                    
+                                </form>
+                              </div>
+                            </div>
+                            <div class="modal-footer modalEditContent justify-content-center"><button type="submit" class="btn rounded-pill" id="ftrsbt">Sign In</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <h1 class="hding text-darkt m-3"> WordCounter</h1></n>
         <p class="para"> Tells you the number the words that you type in the Box Below.</p>
-        <span> <button class="btn btn-dark rounded-pill dmodeBtn" onclick="darkMOde()">Dark</button></span>
-        <span> <button class="btn btn-light text-dark rounded-pill lmodeBtn" onclick="lightMode()" >Light</button></span>
+        
+       
         
         <textarea class="txtArea container mt-3" id="txtArea" placeholder="Enter Your Text Here"></textarea>
        
@@ -144,7 +181,7 @@
         </div>
         </div>
         <div class="col-1"> <button class="btn buttonEdit" style="width: 90px;" id="clrbtn" onclick="clearFunc()"> Clear</button></div>
-        <div class="wc d-flex justify-content-end text-dark col-6 mt-2">
+        <div class="wc d-flex justify-content-end col-6 mt-2">
             <span class="lcount">Letters Count : </span>
             <span class="wordCount lcount" id="wcid"> 0/500 </span>
             
@@ -224,7 +261,7 @@
                                   wordCountNum.style.color = 'red';
                                   setTimeout(stalert, 500)}
             else{TextArea.style.border = 'white';
-                 wordCountNum.style.color = 'white';
+                //  wordCountNum.style.color = 'white';
                  TextArea.style.boxShadow = '0px 15px 15px black'}
 
             }
@@ -245,8 +282,15 @@
             wcType.style.color = 'white';
             let lcc = document.querySelector('.lcount');
             lcc.style.color = 'white';
-            let hexColor = "#212121";
-            document.body.style.backgroundColor = hexColor
+            document.body.style.backgroundColor = "#212121"
+            wordCountNum.style.color = 'white';
+            let modalBody = document.querySelector('.modalEditContent')
+            modalBody.style.backgroundColor = '#212121'
+            document.querySelector('.labCol').style.color = 'white';
+            document.querySelector('.labCol3').style.color = 'white';
+
+            
+
         }
 
         function lightMode(){
@@ -256,8 +300,12 @@
             wcType.style.color = 'black';
             let lcc = document.querySelector('.lcount');
             lcc.style.color = 'black';
-            let hexColor = "#fff"
-            document.body.style.backgroundColor = hexColor;
+            document.body.style.backgroundColor = "#fff";
+            wordCountNum.style.color = 'black';
+            let modalBody = document.querySelector('.modalEditContent')
+            modalBody.style.backgroundColor = '#fff'
+            document.querySelector('.labCol').style.color = 'black';
+            document.querySelector('.labCol3').style.color = 'black';
         }
 
 </script>
