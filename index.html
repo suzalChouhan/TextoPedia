@@ -9,13 +9,14 @@
 </head>
 <style>
 
-        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap");
+        @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
 
 
 
-    body{
-        background-color: #29212d;
-        font-family: 'Poppins';
+    .main{
+        font-family: "Poppins";
+        background: linear-gradient(to top left, rgb(255, 255, 255), rgb(255, 255, 255));
+        height: 100vh;
     }
     .txtArea{
                 height: 40vh;
@@ -28,21 +29,82 @@
                           color: white;
                           
     }
+    #navb{
+            display: flex;
+            flex-direction: row;
+            /* gap: 140px; */
+            background-color: rgb(25, 129, 208);
+            width: 100vw;
+            height: 40px;
+            align-items: center;
+            justify-content: space-around;
+            transform: translateY(-8px);
+            
+    }  
+    .hding{
+            text-align: center;
+    }   
+    .para{
+            text-align: center;
+            transform: translateY(-12px);
+            color: rgb(25, 129, 208);
+            font-weight: bold;
+            
+    }  
+
+    li:hover{cursor: pointer;
+            animation-duration: 0.2s;
+            font-size: 1.1rem;}
+
+    .buttonEdit{
+        background-color: rgb(25, 129, 208);
+        color: white;margin-top: 9px;
+    }
+    .buttonEdit:hover{
+        background-color: rgb(6, 99, 171);
+        color: white;
+    }
+
+    .wc{
+        font-weight: bold;
+    }
 
 </style>
-<body>
+<body class="main">
+    <nav class="navbar navbar-expand">
+       
+            <ul class="nav nav-tabs text-light" id="navb">
+                <a class="navbar-logo" href="#"> <img src="data:image/png;base64,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" class="rounded-pill" width="40px"> </a>
+                <li class="nav-item"> Home </li>
+                <li class="nav-item"> WordCounter </li>
+                <li class="nav-item"> SpellChecker </li>
+                <li class="nav-item"> Vocabulary <div class="badge bg-danger rounded-pill"> New </div> </li>
+                <li class="nav-item"> Other Services </li>
+                <li class="nav-item"> Contact us </li>
+                <li><form class="d-flex">
+                    <input class="form-control" type="text" placeholder="Search" style="height: 33px;"> 
+                    <button class="btn btn-dark ms-1 " type="button" style="height: 33px; display: flex; align-items: center;">Search</button>
+             </form></li>
+             </ul>
+             
+             
+        </nav>
+
     <div class="container">
-        <textarea class="txtArea container mt-5" id="txtArea" placeholder="Enter Your Text Here"></textarea>
+        <h1 class="hding text-darkt m-3"> WordCounter</h1></n>
+        <p class="para"> Tells you the number the words that you type in the Box Below.</p>
+        
+        <textarea class="txtArea container mt-3" id="txtArea" placeholder="Enter Your Text Here"></textarea>
        
        
-        <div class="row gap-3 ms-2">
-           <div class="col-1"> <button type="button" class="btn btn-warning buttonEdit" id="up">UPPERCASE</button> </div>
-           <div class="col-1"> <button type="button" class="btn btn-warning buttonEdit" id="low">lowercase</button> </div>
-           <div class="col-7"></div>
+        <div class="row ms-2 gap-3">
+           <div class="col-1"> <button type="button" class="btn  buttonEdit" id="up">UPPERCASE</button> </div>
+           <div class="col-1"> <button type="button" class="btn  buttonEdit" id="low">lowercase</button> </div>
+           <!-- <div class="col-"></div> -->
         
            <div class="col-1">
                 <div class="dropdown" id="drpdwn">
-                    <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" >Font Style</button>
+                    <button type="button" class="btn dropdown-toggle buttonEdit" data-bs-toggle="dropdown" >Font Style</button>
                         <ul class="dropdown-menu" onclick="fontStyleFunc(this.value)" >
                         <li class="dropdown-item" value="Courier" onclick="fontStyleFunc('Courier')">Courier</li>
                         <li class="dropdown-item" value="Franklin" onclick="fontStyleFunc('Franklin')">Franklin Gothic</li>
@@ -57,22 +119,31 @@
 
         <div class="col-1">
         <div class="dropdown" id="sze">
-            <button type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" >Font Size</button>
+            <button type="button" class="btn dropdown-toggle buttonEdit" data-bs-toggle="dropdown" >Font Size</button>
                 <ul class="dropdown-menu" onclick="fontSizeFunc(this.value)">
                 <li class="dropdown-item" value="2f" onclick="fontSizeFunc('2f')">2</li>
                 <li class="dropdown-item" value="6f" onclick="fontSizeFunc('6f')">6</li>
+                <li class="dropdown-item" value="12f" onclick="fontSizeFunc('12f')">12</li>
+                <li class="dropdown-item" value="14f" onclick="fontSizeFunc('14f')">14</li>
                 <li class="dropdown-item" value="16f" onclick="fontSizeFunc('16f')">16</li>
+                <li class="dropdown-item" value="18f" onclick="fontSizeFunc('18f')">18</li>
                 <li class="dropdown-item" value="24f" onclick="fontSizeFunc('24f')">24</li>
                 <li class="dropdown-item" value="32f" onclick="fontSizeFunc('32f')">32</li>
                 <li class="dropdown-item" value="64f" onclick="fontSizeFunc('64f')">64</li>
+                <!-- <input type="number" class="dropdown-item bg-light" placeholder="Custom Font" id="cstmfnt">       will add later custom font -->
             </ul>
         </div>
         </div>
-        <div class="wc d-flex justify-content-center text-light">
+        <div class="col-1"> <button class="btn buttonEdit" style="width: 90px;" id="clrbtn" onclick="clearFunc()"> Clear</button></div>
+        <div class="wc d-flex justify-content-end text-dark col-6 mt-2">
             <span>Letters Count : </span>
-            <span class="wordCount" id="wcid"> 0/500 </span>
+            <span class="wordCount text-dark" id="wcid"> 0/500 </span>
             
             </div>
+    </div>
+
+
+       
     </div>
 </body>
 <script>
@@ -85,7 +156,10 @@
         function fontSizeFunc(value) {
                    if (value === '2f') {TextArea.style.fontSize = '2px';}
                else if (value === '6f') {TextArea.style.fontSize = '6px';}
+               else if (value === '12f') {TextArea.style.fontSize = '12px';}
+               else if (value === '14f') {TextArea.style.fontSize = '14px';}
                else if (value === '16f') { TextArea.style.fontSize = '16px';}
+               else if (value === '18f') { TextArea.style.fontSize = '18px';}
                else if (value === '24f') {TextArea.style.fontSize = '24px';}
                else if (value === '32f') {TextArea.style.fontSize = '32px';}
                else if (value === '64f') {TextArea.style.fontSize = '64px';}
@@ -141,6 +215,9 @@
                  TextArea.style.boxShadow = '0px 15px 15px black'}
             }
       
+        function clearFunc(){
+            TextArea.value = "";
+        }
         
         window.addEventListener('keydown',newFunc)
 
