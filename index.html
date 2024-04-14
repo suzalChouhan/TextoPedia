@@ -39,30 +39,37 @@
             align-items: center;
             justify-content: space-around;
             transform: translateY(-8px);
+            transition: 0.2s;
             
     }  
+    .navItems{ transition: 0.1s;}
     .hding{
             text-align: center;
     }   
     .para{
             text-align: center;
             transform: translateY(-12px);
-            color: rgb(135, 8, 239);
-            font-weight: bold;
+            background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+                    font-weight: bold;
             
     }  
 
     li:hover{cursor: pointer;
-            animation-duration: 0.2s;
-            font-size: 1.1rem;}
+            
+            transform: scale(1.1);}
 
     .buttonEdit{
-        background:linear-gradient(to left, rgba(146, 0, 146, 0.668),rgba(53, 3, 203, 0.695));
+        background-color: rgb(133, 3, 204);
         color: white;margin-top: 9px;
+        transition: 0.2s;
     }
     .buttonEdit:hover{
-        background-color: rgb(6, 99, 171);
+        background-color: rgb(83, 3, 132);
         color: white;
+        transform: scale(1.05);
     }
 
     .wc{
@@ -71,6 +78,11 @@
     #signBtn{
         background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
         color: white;
+        transition: 0.2s;
+    }
+    #signBtn:hover{
+        cursor: pointer;
+        transform: scale(1.04);
     }
 
     .modal-header{
@@ -83,19 +95,65 @@
                 text-align: center;
                 color: white;
     }
+    #paraHead{
+                margin-top: 160px;
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+    }
 
+    .paraHeadings{
+                    background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    color: transparent;
+    }
+    .cardContainer{
+                    height: 30vh;
+                    
+    }
+
+    .card{
+        background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+        color: white;
+        transition: 0.2s;
+       
+    }
+    .card:hover{
+        cursor: pointer;
+        transform: scale(1.06)
+    }
+
+
+    .card-title:hover{
+                       
+                        text-decoration: underline;
+                        cursor: pointer;
+
+    }
+
+    .dmodeBtn{
+        transition: 0.2s;
+    }
+    .dmodeBtn:hover{ transform: scale(1.03); background-color: black; }
+
+    .lmodeBtn{
+        transition: 0.2s;
+    }
+    .lmodeBtn:hover{ transform: scale(1.03); background-color: rgb(255, 255, 255); }
+    
 </style>
 <body class="main">
     <nav class="navbar navbar-expand">
        
             <ul class="nav nav-tabs text-light" id="navb">
                 <a class="navbar-logo" href="#"> <img src="https://img.freepik.com/free-vector/bird-colorful-gradient-design-vector_343694-2506.jpg?size=338&ext=jpg&ga=GA1.1.1700460183.1712880000&semt=ais" class="rounded-pill" width="40px"> </a>
-                <li class="nav-item"> Home </li>
-                <li class="nav-item"> WordCounter </li>
-                <li class="nav-item"> SpellChecker </li>
-                <li class="nav-item"> Vocabulary <div class="badge bg-danger rounded-pill"> New </div> </li>
-                <li class="nav-item"> Other Services </li>
-                <li class="nav-item"> Contact us </li>
+                <li class="nav-item navItems"> Home </li>
+                <li class="nav-item navItems"> WordCounter </li>
+                <li class="nav-item navItems"> SpellChecker </li>
+                <li class="nav-item navItems"> Vocabulary <div class="badge bg-danger rounded-pill"> New </div> </li>
+                <li class="nav-item navItems"> Other Services </li>
+                <li class="nav-item navItems"> Contact us </li>
                 <li><form class="d-flex">
                     <input class="form-control" type="text" placeholder="Search" style="height: 33px;"> 
                     <button class="btn btn-dark ms-1 " type="button" style="height: 33px; display: flex; align-items: center;">Search</button>
@@ -109,7 +167,7 @@
         <div class="row modebox">
 
             <span class="col-1"> <button class="btn btn-dark rounded-pill dmodeBtn" onclick="darkMOde()">Dark</button></span>
-            <span class="col-1"> <button class="btn btn-light text-dark rounded-pill lmodeBtn" onclick="lightMode()" >Light</button></span>
+            <span class="col-1"> <button class="btn btn-light text-dark rounded-pill lmodeBtn " onclick="lightMode()" >Light</button></span>
             <span class="col-9"></span>
             <span class="col-1"> <button type="button" class="btn rounded-pill" id="signBtn" data-bs-toggle="modal" data-bs-target="#signInData"> Sign In </button></span>
             <div class="modal fade" id="signInData">
@@ -192,9 +250,61 @@
        
     </div>
 
-    <!-- <div class="container">
-        <h2 class="text-dark "> Is there any difference betweeen Word and Letter?</h2>
-    </div> -->
+    <div class="container" id="paraHead">
+        
+        <p> 
+           <div> <h2 class="paraHeadings">Word & Letters Related Services: </h2>
+            we specialize in providing comprehensive word and letters related services aimed at enhancing language proficiency and communication skills. Whether you're looking to expand your vocabulary, improve spelling accuracy, or refine your written expression, our tailored programs are designed to meet your specific needs.</div>
+            
+           <div> <h2 class="paraHeadings"> Vocabulary Enhancement:</h2>
+            Our vocabulary enhancement services are crafted to enrich your lexicon with a diverse range of words, enabling you to articulate your thoughts and ideas more precisely and eloquently. Through engaging exercises and interactive learning modules, we facilitate the acquisition of new words and their appropriate usage in various contexts.</div>
+            
+           <div> <h2 class="paraHeadings"> Spelling Correction:</h2>
+            Accurate spelling is essential for effective communication. With our spelling correction services, we help you overcome common spelling errors and enhance your spelling proficiency. Our systematic approach includes personalized feedback and targeted exercises to reinforce correct spelling patterns and eliminate recurring mistakes.</div>
+            
+          <div>  <h2 class="paraHeadings"> Grammar & Expression:</h2>
+            Effective communication encompasses more than just vocabulary and spelling. Our grammar and expression coaching focuses on refining your writing style, sentence structure, and overall coherence. By addressing grammar rules, punctuation usage, and sentence construction, we empower you to convey your message with clarity and precision.</div>
+            
+           <div> <h2 class="paraHeadings"> Personalized Instruction:</h2>
+            We understand that every learner has unique strengths and areas for improvement. That's why our services are delivered through personalized instruction tailored to your specific goals and learning pace. Whether you're a beginner looking to build a strong foundation or an advanced learner seeking to refine your language skills, our experienced instructors are here to support your journey.</div>
+            
+          <div>  <h2 class="paraHeadings"> Interactive Learning Environment:</h2>
+            Learning should be engaging and enjoyable. That's why we foster an interactive learning environment where you can actively participate and interact with the material. Through multimedia resources, interactive exercises, and real-world applications, we make learning both effective and enjoyable.</div>
+            
+          <div>  <h2 class="paraHeadings"> Continuous Support:</h2>
+            Learning is a journey, and we're committed to supporting you every step of the way. Beyond the structured lessons, we provide ongoing support and guidance to help you stay motivated and make steady progress towards your language goals. Whether you have questions, need clarification, or simply want encouragement, our team is here to assist you.</div>
+            
+            Elevate your language skills with our comprehensive word and letters related services. Contact us today to embark on your journey towards linguistic mastery.</p>
+    </div>
+
+    <div class="container mt-5 d-flex gap-5 cardContainer">
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">WordCounter</h2>
+                <p class="card-text"> For Counting Number of Words <br> in a Second </p>
+                <button type="button" class="btn text-light">Try Now</button>
+            </div>
+        </div>
+       <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">SpellChecker</h2>
+                <p class="card-text"> For Founding Any Spelling Mistake  <br> in any Paragraph </p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Vocabulary</h2>
+                <p class="card-text"> One Place for all Vocab Excercise</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h2 class="card-title">Other Services</h2>
+                <p class="card-text"> Visit Regularly for New Updates</p>
+            </div>
+        </div>
+        
+    </div>
 </body>
 <script>
         const TextArea = document.querySelector('#txtArea');
