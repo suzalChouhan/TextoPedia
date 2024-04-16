@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+
+
+.main{
+    font-family: "Poppins";
+    /* background-color: #ffffff; */
+    height: 100vh;
+}
+#mainhead{
+            /* font-family: "Gill Sans"; */
+            background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+}
+.txtArea{
+            height: 40vh;
+            margin-bottom: 5px;
+            box-shadow: 0 15px 15px rgb(0, 0, 0);
+}
+
+.dropdown-item:hover{ cursor: pointer;
+                      background-color: #29212d;
+                      color: white;
+                      
+}
+#logoimg{
+        transform: translateY(-30px);
+}
+#navb{
+        
+    background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+        width: 100vw;
+        height: 40px;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateY(-8px);
+        transition: 0.2s;
+        
+}  
+#navForm{ transition: 0.2s;}
+.navItems{ transition: 0.1s;}
+.hding{
+        text-align: center;
+}   
+.para{
+        text-align: center;
+        transform: translateY(-12px);
+        background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: bold;
+        
+}  
+
+li:hover{cursor: pointer;
+        
+        transform: scale(1.1);}
+
+.buttonEdit{
+    background-color: rgb(133, 3, 204);
+    color: white;margin-top: 9px;
+    transition: 0.2s;
+}
+.buttonEdit:hover{
+    background-color: rgb(83, 3, 132);
+    color: white;
+    transform: scale(1.05);
+}
+
+.wc{
+    font-weight: bold;
+}
+#signBtn{
+    background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+    color: white;
+    transition: 0.2s;
+}
+#signBtn:hover{
+    cursor: pointer;
+    transform: scale(1.04);
+}
+
+.modal-header{
+        background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+}
+label{font-size: 1.3rem;}
+
+#ftrsbt{
+            background: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+            text-align: center;
+            color: white;
+}
+#paraHead{
+            /* margin-top: 160px; */
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+}
+
+.paraHeadings{
+                background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                font-weight: bold;
+}
+.cardContainer{
+                height: 30vh;
+                
+}
+
+.card{
+    background-image: linear-gradient(to left, rgba(146, 0, 146, 0.663),rgba(53, 3, 203, 0.674));
+    color: white;
+    transition: 0.2s;
+   
+}
+.card:hover{
+    cursor: pointer;
+    transform: scale(1.06)
+}
+
+
+.card-title:hover{
+                   
+                    text-decoration: underline;
+                    cursor: pointer;
+
+}
+
+.dmodeBtn{
+    transition: 0.2s;
+}
+.dmodeBtn:hover{ transform: scale(1.03); background-color: black; }
+
+.lmodeBtn{
+    transition: 0.2s;
+    /* transform: translateX(-40px); */
+}
+.lmodeBtn:hover{ transform: scale(1.03); background-color: rgb(255, 255, 255); }
+
+.bold-text{
+    font-weight: bold;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.drpscr{
+    height: 200px;
+    overflow-y: auto;
+}
+
+.drpsze{
+
+    height: 200px;
+    overflow-y: auto;
+}
+
+#watermark{
+            
+                position: fixed;
+                transform: rotate(-40deg);
+                font-size: 10rem;
+                opacity: 0.2;
+                
+
+}
+
+
+#disBtn:hover{
+        cursor: not-allowed;
+}
