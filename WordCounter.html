@@ -68,66 +68,67 @@
     <p class="para"> Tells you the number the words that you type in the Box Below.</p>
     <textarea class="txtArea container mt-3" id="txtArea" placeholder="Enter Your Text Here"></textarea>
     <div class="row ms-2 gap-3">
-        <div class="col-1"> <button type="button" class="btn buttonEdit" id="up">UPPERCASE</button> </div>
-        <div class="col-1"> <button type="button" class="btn buttonEdit" id="low">lowercase</button> </div>
-        <div class="col-1">
-            <div class="dropdown" id="drpdwn">
-                <button type="button" class="btn dropdown-toggle buttonEdit" data-bs-toggle="dropdown">Font Style</button>
-                <ul class="dropdown-menu drpscr" onclick="fontStyleFunc(this.value)">
-                        <li class="dropdown-item" value="Courier" onclick="fontStyleFunc('Courier')">Courier</li>
-                        <li class="dropdown-item" value="Franklin" onclick="fontStyleFunc('Franklin')">Franklin Gothic</li>
-                        <li class="dropdown-item" value="Gill" onclick="fontStyleFunc('Gill')">Gill Sans</li>
-                        <li class="dropdown-item" value="Lucida" onclick="fontStyleFunc('Lucida')">Lucida Sans</li>
-                        <li class="dropdown-item" value="Georgia" onclick="fontStyleFunc('Georgia')">Georgia</li>
-                        <li class="dropdown-item" value="Poppins" onclick="fontStyleFunc('Poppins')">Poppins</li>
-                        <li class="dropdown-item" value="Impact" onclick="fontStyleFunc('Impact')">Impact</li>
-                        <li class="dropdown-item" value="Verdana" onclick="fontStyleFunc('Verdana')">Verdana</li>
-                        <li class="dropdown-item" value="Arial" onclick="fontStyleFunc('Arial')">Arial</li>
-                        <li class="dropdown-item" value="Times New Roman" onclick="fontStyleFunc('Times New Roman')">Times New Roman</li>
-                        <li class="dropdown-item" value="Helvetica" onclick="fontStyleFunc('Helvetica')">Helvetica</li>
-                        <li class="dropdown-item" value="Tahoma" onclick="fontStyleFunc('Tahoma')">Tahoma</li>
-                        <li class="dropdown-item" value="Century Gothic" onclick="fontStyleFunc('Century Gothic')">Century Gothic</li>
-                        <li class="dropdown-item" value="Trebuchet MS" onclick="fontStyleFunc('Trebuchet MS')">Trebuchet MS</li>
-                        <li class="dropdown-item" value="Arial Narrow" onclick="fontStyleFunc('Arial Narrow')">Arial Narrow</li>
-                        <li class="dropdown-item" value="Palatino" onclick="fontStyleFunc('Palatino')">Palatino</li>
-                        <li class="dropdown-item" value="Bookman" onclick="fontStyleFunc('Bookman')">Bookman</li>
-                        <li class="dropdown-item" value="Comic Sans MS" onclick="fontStyleFunc('Comic Sans MS')">Comic Sans MS</li>
-                        <li class="dropdown-item" value="Copperplate" onclick="fontStyleFunc('Copperplate')">Copperplate</li>
-                        <li class="dropdown-item" value="Courier New" onclick="fontStyleFunc('Courier New')">Courier New</li>
-                    </ul>
-                    
-                </ul>
-            </div>
+        <div class="col-1"> <button type="button" class="btn fontList" id="up">UPPERCASE</button> </div>
+        <div class="col-1"> <button type="button" class="btn fontList" id="low">lowercase</button> </div>
+        
+
+            <div class="col-1">
+            <select onchange="fontStyleFunc(this.value)" class="btn fontList">
+                <option value="Font Style">Font Style</option>
+                <option value="Courier">Courier</option>
+                <option value="Franklin">Franklin Gothic</option>
+                <option value="Gill">Gill Sans</option>
+                <option value="Lucida">Lucida Sans</option>
+                <option value="Georgia">Georgia</option>
+                <option value="Poppins">Poppins</option>
+                <option value="Impact">Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Tahoma">Tahoma</option>
+                <option value="Century Gothic">Century Gothic</option>
+                <option value="Trebuchet MS">Trebuchet MS</option>
+                <option value="Arial Narrow">Arial Narrow</option>
+                <option value="Palatino">Palatino</option>
+                <option value="Bookman">Bookman</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Copperplate">Copperplate</option>
+                <option value="Courier New">Courier New</option>
+                </select>
+                
+        
         </div>
         <div class="col-1">
-            <form class="dropdown formHover" id="sze">
-                <button type="button" class="btn dropdown-toggle buttonEdit" data-bs-toggle="dropdown">Font Size</button>
-                <ul class="dropdown-menu drpsze" onclick="fontSizeFunc(this.value)">
-                    <li class="dropdown-item" value="2f" onclick="fontSizeFunc('2f')">2</li>
-                    <li class="dropdown-item" value="6f" onclick="fontSizeFunc('6f')">6</li>
-                    <li class="dropdown-item" value="12f" onclick="fontSizeFunc('12f')">12</li>
-                    <li class="dropdown-item" value="14f" onclick="fontSizeFunc('14f')">14</li>
-                    <li class="dropdown-item" value="16f" onclick="fontSizeFunc('16f')">16</li>
-                    <li class="dropdown-item" value="18f" onclick="fontSizeFunc('18f')">18</li>
-                    <li class="dropdown-item" value="24f" onclick="fontSizeFunc('24f')">24</li>
-                    <li class="dropdown-item" value="32f" onclick="fontSizeFunc('32f')">32</li>
-                    <li class="dropdown-item" value="64f" onclick="fontSizeFunc('64f')">64</li>
-                </ul>
-            </form>
+            
+                <select class="fontList btn" onclick="fontSizeFunc(this.value)">
+                    <option value="none">Font Size</li>
+                    <option value="2f">2</li>
+                    <option value="6f">6</li>
+                    <option value="12f">12</li>
+                    <option value="14f">14</li>
+                    <option value="16f">16</li>
+                    <option value="18f">18</li>
+                    <option value="24f">24</li>
+                    <option value="32f">32</li>
+                    <option value="64f">64</li>
+                </select>
+        
         </div>
         <div class="col-1">
-            <div class="dropdown" id="txtDecoDrop"> 
-                <button type="button" class="btn dropdown-toggle buttonEdit" data-bs-toggle="dropdown"> Text Decorate </button>
-                    <ul class="dropdown-menu" onclick="txtDeco()">
-                        <li class="dropdown-item" value="Bold" onclick="txtDeco('Bold')"><b>Bold</b></li>
-                        <li class="dropdown-item" value="Italic" onclick="txtDeco('Italic')"><i>Italic</i></li>
-                        <li class="dropdown-item" value="Underline" onclick="txtDeco('Underline')"><u>Underline</u></li>
-                    </ul>
+                    <select class="fontList btn" onclick="txtDeco(this.value)">
+                        <option value="no"><b>Select Style</b></li>
+                        <option value="Bold"><b>Bold</b></li>
+                        <option value="Italic"><i>Italic</i></li>
+                        <option value="Underline"><u>Underline</u></li>
+                    </select>
 
             </div>
-            </div>
-        <div class="col-2"> <button class="btn buttonEdit ms-5" style="width: 90px;" id="clrbtn" onclick="clearFunc()"> Clear</button></div>
-        <div class="wc d-flex justify-content-end col-4 mt-2">
+            
+        
+        <div class="col-1"> <button class="btn fontList" id="clrbtn" onclick="clearFunc()"  style="width: 80px;"> Clear</button></div>
+    
+        <div class="wc d-flex justify-content-end col-5 mt-3">
             <span class="lcount">Letters Count : </span>
             <span class="wordCount lcount text-dark" id="wcid"> 0/10000 </span>
         </div>

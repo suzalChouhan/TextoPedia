@@ -172,3 +172,20 @@ label{font-size: 1.3rem;}
 #disBtn:hover{
         cursor: not-allowed;
 }
+
+.fontList{
+                    background-color: rgb(133, 3, 204);;
+                    color: white;
+                    width: 120px;
+                    height: 37px;
+                    margin-top: 9px;
+                    text-align: center;
+                    padding: 3px;
+                
+                }
+.fontList:hover{
+    background-color: rgb(83, 3, 132);
+    color: white;
+    transform: scale(1.05);
+}
+
