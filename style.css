@@ -189,3 +189,11 @@ label{font-size: 1.3rem;}
     transform: scale(1.05);
 }
 
+#disBtn:hover{
+    cursor: not-allowed;
+}
+
+.homecorousel{
+        width: 60vw;;
+    
+}
